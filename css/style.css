@@ -1,0 +1,336 @@
+body, ul, li, p, h1, h2, a{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+@media(min-width:615px){
+    body, ul, li, p, h1, h2, a{
+        list-style: none;
+    }
+
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    color: #222222;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+header{
+    width: 100%;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* Superinfo */
+
+.info-bg{
+    background: #d63d00;
+    color: #fff;
+}
+.info{
+    max-width: 960px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.info p, .info a{
+    margin: 0 10px 10px 10px;
+}
+.info a{
+    color: #fff;
+}
+/* Menu */
+header.rolagem{
+    background-color: #000;
+    padding: 20px 4%;
+}
+header.rolagem a{
+    color: #fff;
+}
+
+.menu-info{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.menu-info a{
+    color: #fff;
+}
+.menu-logo a{
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin: 0 10px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 10px;
+}
+.menu li a{
+    display: block;
+    padding: 10px;
+
+}
+.menu a:hover{
+    color:122ab2 ;
+}
+#btn-mbl{
+    display: none;
+}
+@media(max-width: 666px){
+    #btn-mbl{
+        display: block;
+    }
+    .menu-logo{
+        position: relative;
+        z-index: 100000;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 120px;
+        right: 0px;
+        padding: 30px;
+        background-color: #021766;
+        height: 0px;
+        transition:  .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active .menu{
+        height: calc(100vh - 60px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid black(247, 6, 6, 0.05);
+        list-style: square;
+    }
+    #btn-mbl{
+        display: flex;
+        padding:  .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    #hamburger{
+        border-top: 2px solid white;
+        width: 20px;
+    }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburger{
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    .info-bg{
+        display: none;
+    }
+    .introducao, .sobre-info h1{
+        text-align: center;
+    }
+}
+
+/* Introdução */
+
+.introducao{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 10px;
+    text-align: center;
+    color:#fff;
+}
+.banner{
+    height: 50vh;
+    background-image: url(/img/fundo3.jpg);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fundo img{
+    width: 100vw;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateY();
+}
+/* Sobre */
+
+.sobre{
+    border-top: 2px solid #f15d22;
+    border-bottom: 2px solid #f15d22;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobre-info{
+    flex: 2 1 300px;
+    margin: 0 10px;
+}
+
+.sobre-info h1{
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+.sobre-info p{
+    font: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+}
+.sobre-img{
+    flex: 1 1 160px;
+    margin: 0 10px;
+}
+
+/* Produtos */
+.equipe{
+    max-width: 960px;
+    margin: 60px auto;
+}
+.equipe h1{
+    font-size: 3em;
+    margin: 0 10px 60px 10px;
+    text-align: center;
+}
+.equipe-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.equipe-item{
+    flex: 1 1 175px;
+    margin: 10px;
+    background:#f7f7f7;
+}
+.equipe-item h2{
+    font-size: 3em;
+    color: #a4a4a4;
+    padding: 60px 20px;
+    text-align: center;
+}
+.equipe-item h4{
+    font-size: 1.25em;
+    color: #a4a4a4;
+    text-align: center;
+}
+.user1{
+    border-top: 8px solid #f15d22;
+}
+.user2{
+    border-top: 8px solid #f15d22;
+}
+.user3{
+    border-top: 8px solid #f15d22;
+}
+/* DEPOIMENTOS */
+
+.depoimentos{
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid #f15d22;
+    border-bottom: 2px solid #f15d22;
+}
+.depoimentos h1{
+    font-size: 3em;
+    margin: 50px 300px 60px 10px;
+    text-align: center;
+}
+
+.depoimentos-item{
+    flex: 1 1 300px;
+    margin: 20px 10px;
+}
+.depoimentos-item h2{
+    font-size: 2.25em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+.depoimentos-item h2::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+    background: #122ab2;
+}
+.depoimentos-item:nth-of-type(3n+1) h2::before{
+    background-color: #f15d22;
+}
+
+.depoimentos-item:nth-of-type(3n+2) h2::before{
+    background-color: #f15d22;
+}
+
+.depoimentos-item:nth-of-type(3n+3) h2::before{
+    background-color: #f15d22;
+}
+.depoimentos-item p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #7c7c7c;
+}
+/* Footer */
+
+.footer{
+    display: flex;
+    background: #f15d22;
+    height: 200px;
+    align-items: center;
+}
+.footer p{
+    flex:1;
+    text-align: center;
+    font-size: 2.25em;
+    color: #000;
+}
