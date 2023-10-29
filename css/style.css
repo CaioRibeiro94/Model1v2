@@ -94,7 +94,7 @@ header.rolagem a{
 #btn-mbl{
     display: none;
 }
-@media(max-width: 666px){
+@media(max-width: 667px){
     #btn-mbl{
         display: block;
     }
@@ -165,6 +165,9 @@ header.rolagem a{
     .introducao, .sobre-info h1{
         text-align: center;
     }
+    .footer p{
+        font-size: 1.2em;
+    }
 }
 
 /* Introdução */
@@ -180,7 +183,7 @@ header.rolagem a{
     color:#fff;
 }
 .banner{
-    height: 50vh;
+    height: 80vh;
     background-image: url(/img/fundo3.jpg);
     background-position: 100% 0;
     background-repeat: no-repeat;
@@ -204,8 +207,7 @@ header.rolagem a{
 /* Sobre */
 
 .sobre{
-    border-top: 2px solid #f15d22;
-    border-bottom: 2px solid #f15d22;
+    border-bottom: 2px solid #043ebc;
     max-width: 1150px;
     margin: 0 auto;
     padding: 60px 0;
@@ -263,13 +265,13 @@ header.rolagem a{
     text-align: center;
 }
 .user1{
-    border-top: 8px solid #f15d22;
+    border-top: 8px solid #043ebc;
 }
 .user2{
-    border-top: 8px solid #f15d22;
+    border-top: 8px solid #043ebc;
 }
 .user3{
-    border-top: 8px solid #f15d22;
+    border-top: 8px solid #043ebc;
 }
 /* DEPOIMENTOS */
 
@@ -305,15 +307,15 @@ header.rolagem a{
     background: #122ab2;
 }
 .depoimentos-item:nth-of-type(3n+1) h2::before{
-    background-color: #f15d22;
+    background-color: #043ebc;
 }
 
 .depoimentos-item:nth-of-type(3n+2) h2::before{
-    background-color: #f15d22;
+    background-color: #043ebc;
 }
 
 .depoimentos-item:nth-of-type(3n+3) h2::before{
-    background-color: #f15d22;
+    background-color: #043ebc;
 }
 .depoimentos-item p{
     font-size: 1.25em;
@@ -324,13 +326,13 @@ header.rolagem a{
 
 .footer{
     display: flex;
-    background: #f15d22;
+    background: #040533;
     height: 200px;
     align-items: center;
 }
 .footer p{
     flex:1;
     text-align: center;
-    font-size: 2.25em;
-    color: #000;
+    font-size: 2em;
+    color: #fff;
 }
