@@ -181,7 +181,7 @@ header.rolagem a{
     padding: 60px 10px;
     text-align: center;
     color:#fff;
-
+    
 }
 .banner{
     height: 60vh;
@@ -192,9 +192,11 @@ header.rolagem a{
 
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
+
 button{
     position: relative;
     width: 200px;
@@ -202,12 +204,15 @@ button{
     text-align: center;
     margin: 20px 45px;
     font-weight: bold;
-    border: 2px solid #043ebc;
+    border: 2px solid #868686;
     background: transparent;
     color: #fff;
     cursor: pointer;
     overflow: hidden;
     text-transform: uppercase;
+}
+.btn-w button{
+    border: 2px solid #3eff37;
 }
 .btn-w a{
     background:#3eff37;
